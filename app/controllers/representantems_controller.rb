@@ -1,6 +1,7 @@
 class RepresentantemsController < ApplicationController
-  before_action :set_representantem, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_usuario!
+  before_action :set_representantem, only: [:show, :edit, :update, :destroy, :upvote]
+  
   # GET /representantems
   # GET /representantems.json
   def index
@@ -59,6 +60,11 @@ class RepresentantemsController < ApplicationController
       format.html { redirect_to representantems_url, notice: 'Representantem was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def upvote
+    @representantem.upvote_by current_usuario
+    redirect_to :salir
   end
 
   private

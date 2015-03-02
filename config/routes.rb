@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  resources :representantems
+  get 'elecciones/salir', as: :salir
+
+
+  devise_for :usuarios
+  resources :representantems do
+    member do
+      put "like", to: "representantems#upvote"
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'representantems#index'
+   root to: "elecciones#inicio"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
