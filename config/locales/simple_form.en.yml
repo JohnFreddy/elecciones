@@ -9,16 +9,18 @@ en:
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "Please review the problems below:"
+      default_message: "Por favor, revisa los problemas:"
     # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
+    labels:
+       defaults:
+         password: 'Contraseña'
+         password_confirmation: 'Confirma contraseña'
+         email: 'Documento'
+       user:
+         new:
+           email: 'Documento'
+         edit:
+           email: 'Documento'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
