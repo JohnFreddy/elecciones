@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  
+  resources :representantens do
+    member do
+      put "like", to: "representantens#upvote"
+    end
+  end
+
+  resources :representantets do
+    member do
+      put "like", to: "representantets#upvote"
+    end
+  end
+
   get 'elecciones/salir', as: :salir
 
 
