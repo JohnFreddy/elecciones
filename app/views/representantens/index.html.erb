@@ -1,15 +1,16 @@
-<%= current_usuario.email %>
+<body class="homepageb">
+  <%= current_usuario.email %>
 <center>
-<h1>Lista de postulados</h1>
+
 <div class="contene">
 <div class="panel panel-default">
-  <div class="panel-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ipsa mollitia quam beatae eligendi quas saepe odio optio molestias est numquam fugit voluptatum veniam perferendis temporibus. Hic perferendis distinctio perspiciatis.</div>
+  <div class="panel-heading arriba"> <h1>Elección Representante 2015 Centro de Formación en Diseño Confección y Moda Regional Antioquia</h1></div>
   <div class="panel-body">
     <% @representantens.each do |representanten| %>
       <div class="contene2">
         <div class="panel panel-primary">
           <div class="panel-heading">
-            <h3 class="panel-title"><%= representanten.nombre %></h3>
+            <h2 class="panel-title"><%= representanten.nombre %></h2>
           </div>
           <div class="panel-body">
             
@@ -36,3 +37,4 @@
 
 <%= button_to 'New representanten', new_representanten_path, class: "btn btn-info", :method => "get"%>
 </center>
+</body>

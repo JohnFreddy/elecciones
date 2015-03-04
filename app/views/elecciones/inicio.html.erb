@@ -1,5 +1,25 @@
-<% if current_usuario %>
+<body class="homepageb">
+    <% if current_usuario %>
  <%= render "representantets/votar"  %>
 <% else %>
-<%= link_to "Sign up", new_usuario_registration_path, :class => 'navbar-link'  %>
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+
+<div class="jumbotron">
+  <h1>Elecciones Representantes 2015</h1>
+  <br></br>
+  <p>La representación es un ejercicio democrático, avalado por la desición y la mayoría de votos de los aprendices,
+   en virtud del cual un aprendiz es elegido como representante ante la Dirección General del SENA, la Regional o el Centro de Formación, esto implica
+    un compromiso con los aprendices que representa, con la institución y en General con la Comunidad Educativa.</p>
+  <p><%= link_to "Sign up", new_usuario_registration_path, :class => 'navbar-link'  %></p>
+</div>
+
+
 <% end %>
+</body>

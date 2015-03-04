@@ -5,6 +5,7 @@ class RepresentantetsController < ApplicationController
   respond_to :html
 
   def index
+    @home_pagecc = true
     @representantets = Representantet.all
     respond_with(@representantets)
   end

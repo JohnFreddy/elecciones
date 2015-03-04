@@ -30,6 +30,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'devise'
 gem "simple_form"
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+
+gem 'font-awesome-rails', '~> 4.3.0.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
