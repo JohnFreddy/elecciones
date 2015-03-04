@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  resources :representantefs do
+    member do
+      put "like", to: "representantefs#upvote"
+    end
+  end
+
   resources :representantens do
     member do
       put "like", to: "representantens#upvote"
