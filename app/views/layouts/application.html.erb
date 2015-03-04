@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+  <title>Elecciones 2015</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
+	<%= csrf_meta_tags %>
 </head>
-<body>
-<%= yield %>
 
+<% if @home_pageaa == true  %>
+  <body class="homepagea">
+<% elsif @home_pagebb == true %>
+  <body class="homepageb">
+<% elsif @home_pagecc == true %>
+  <body class="homepagec">
+<% else %>
+  <body>
+<%end%>
+
+  <div class="container">
+    <div class="row">
+       <%= yield %>
+    </div>
+  </div>
 </body>
 </html>

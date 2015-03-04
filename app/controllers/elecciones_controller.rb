@@ -4,5 +4,7 @@ class EleccionesController < ApplicationController
   def inicio
      @representantems = Representantem.all
      @representantets = Representantet.all
+     @representantens = Representanten.all
+     @representantefs = Representantef.all
   end
 end
