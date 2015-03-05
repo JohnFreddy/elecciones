@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   get 'elecciones/salir', as: :salir
+  get 'elecciones/admin'
 
 
   devise_for :usuarios

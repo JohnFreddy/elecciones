@@ -5,7 +5,6 @@ class RepresentantemsController < ApplicationController
   # GET /representantems
   # GET /representantems.json
   def index
-    @home_pageaa = true
     @representantems = Representantem.all
   end
 
