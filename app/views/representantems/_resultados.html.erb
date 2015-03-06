@@ -7,7 +7,7 @@
   <div class="panel-body">
     <% @representantems.each do |representantem| %>
       <div class="contene2">
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><%= representantem.nombre %></h3>
           </div>
@@ -15,14 +15,9 @@
             
             <%= image_tag(representantem.foto,  height: '250', width: '250') %>
             
-            <div class="panel-footer"><%= link_to 'Editar', edit_representantem_path(representantem) %>
-            <%= link_to 'Destroy', representantem, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%= link_to like_representantem_path(representantem), method: :put, class: "btn btn-default"  do %>
-              <i></i>
-              <%= representantem.get_upvotes.size %>
-            <% end %>
+            <div class="panel-footer">
+              <span class="label label-default fa-2x boto"><%= representantem.get_upvotes.size %> Votos</span>
             </div>
-            
           </div>
         </div>
       </div>
